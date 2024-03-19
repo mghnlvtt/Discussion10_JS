@@ -16,16 +16,21 @@
             // 1. Change the h1 element to your name.
             document.querySelector('h1').innerHTML = "Meghan's Pet Gallery";
             // 2. Update the three span elements using ONLY JavaScript
-                
-    
+            document.getElementById("URL").innerHTML = document.URL;
+            document.querySelector("#URL").innerHTML = document.URL;
+            document.querySelector("#items").innerHTML = document.querySelectorAll("h2").length;
+            document.querySelector("#time").innerHTML = new Date();
             // 3. Change the background color and margin for the entire page.
-                
+            document.body.style.backgroundColor = "yellow";
+            document.body.style.margin = "30px";
         }
     
         // 4. If someone uses the keyboard shortcut to copy the words "Thank you for visiting!" then add the words "Go Blue" to the final div.  
         // Each occurrence should be on a separate line.  Don't use 
         // paragraphs. 
-    
+        function copyFunction() {
+            document.querySelector("#cheer").innerHTML += "<br>Go Blue!\n"
+        }
                    
     </script>
 
@@ -33,7 +38,7 @@
 <body>
     <title>Pets</title>
 </head>
-<body>
+<body onload="displayInformation()">
     <a href = "#main" class="skip">Skip to Main Content</a>
     <header>
         <nav>
